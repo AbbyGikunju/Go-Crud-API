@@ -1,13 +1,11 @@
 package main
 
 import (
-	"fmt"
 	"go-crud-api/db"
-
-	
+	"go-crud-api/router"
 )
 
 func main() {
 	db.INITPostgresDB()
-	fmt.Println("Connected to the database")
+	router.InitRouter().Run()
 }
